@@ -2,7 +2,7 @@
 package com.example.android.footballnews;
 
 /**
- * An {@link FootballNew} object contains information related to a single earthquake.
+ * An {@link FootballNew} object contains information related to a single football new
  */
 public class FootballNew {
 
