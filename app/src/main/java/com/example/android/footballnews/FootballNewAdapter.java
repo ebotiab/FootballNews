@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * An {@link FootballNewAdapter} knows how to create a list item layout for each earthquake
+ * An {@link FootballNewAdapter} knows how to create a list item layout for each football new
  * in the data source (a list of {@link FootballNew} objects).
  *
  * These list item layouts will be provided to an adapter view like ListView
