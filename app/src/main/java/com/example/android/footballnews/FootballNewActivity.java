@@ -116,7 +116,7 @@ public class FootballNewActivity extends AppCompatActivity
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
 
-        // Set empty state text to display "No football news found."
+        // Set empty< state text to display "No football news found."
         mEmptyStateTextView.setText(R.string.no_footballNews);
 
         // Clear the adapter of previous football new data
