@@ -131,7 +131,7 @@ public class FootballNewActivity extends AppCompatActivity
         // data set. This will trigger the ListView to update.
         if (footballNews != null && !footballNews.isEmpty()) {
             mAdapter.addAll(footballNews);
-//            updateUi(earthquakes);
+//            updateUi(footballNews);
         }
     }
 

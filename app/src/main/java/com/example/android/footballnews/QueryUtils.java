@@ -177,8 +177,8 @@ public final class QueryUtils {
                 JSONObject firstTag = tagsArray.getJSONObject(0);
                 String author = firstTag.getString("webTitle");
 
-                // Extract the value for the key called "sectionName"
-                String section = currentFootballNew.getString("sectionName");
+                // Extract the value for the key called "pillarName"
+                String section = currentFootballNew.getString("pillarName");
 
                 // Extract the value for the key called "webUrl"
                 String url = currentFootballNew.getString("webUrl");
