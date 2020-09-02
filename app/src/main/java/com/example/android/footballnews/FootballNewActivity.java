@@ -20,8 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FootballNewActivity extends AppCompatActivity
-        implements LoaderCallbacks<List<FootballNew>>,
-        SharedPreferences.OnSharedPreferenceChangeListener {
+        implements LoaderCallbacks<List<FootballNew>> {
 
     private static final String LOG_TAG = FootballNewActivity.class.getName();
 
@@ -107,7 +106,8 @@ public class FootballNewActivity extends AppCompatActivity
 
     @Override
     public Loader<List<FootballNew>> onCreateLoader(int i, Bundle bundle) {
-        return null;
+        // Create a new loader for the given URL
+        return new FootballNewLoader(this, GUARDIAN_REQUEST_URL);
     }
 
     @Override
@@ -116,17 +116,17 @@ public class FootballNewActivity extends AppCompatActivity
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
 
-        // Set empty< state text to display "No football news found."
+        // Set empty state text to display "No football news found."
         mEmptyStateTextView.setText(R.string.no_footballNews);
 
-        // Clear the adapter of previous football new data
-        mAdapter.clear();
+        // Clear the adapter of previous football news data
+        //mAdapter.clear();
 
         // If there is a valid list of {@link FootballNew}s, then add them to the adapter's
         // data set. This will trigger the ListView to update.
         if (footballNews != null && !footballNews.isEmpty()) {
             mAdapter.addAll(footballNews);
-//            updateUi(footballNews);
+//            updateUi(earthquakes);
         }
     }
 
@@ -134,11 +134,6 @@ public class FootballNewActivity extends AppCompatActivity
     public void onLoaderReset(Loader<List<FootballNew>> loader) {
         // Loader reset, so we can clear out our existing data.
         mAdapter.clear();
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-
     }
 }
 

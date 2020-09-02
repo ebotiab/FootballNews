@@ -15,28 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ConstraintLayout screen = findViewById(R.id.touch);
-        screen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Create a new intent to open the {@link FootballNewActivity}
-                Intent menuIntent = new Intent(MainActivity.this, FootballNewActivity.class);
-
-                // Start the new activity
-                startActivity(menuIntent);
-            }
-        });
-
         // Create a click listener in the wall title
         ConstraintLayout touchScreen = findViewById(R.id.touch);
         touchScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FootballNewActivity}
-                Intent menuIntent = new Intent(MainActivity.this, FootballNewActivity.class);
+                Intent startItem = new Intent(MainActivity.this, FootballNewActivity.class);
 
                 // Start the new activity
-                startActivity(menuIntent);
+                startActivity(startItem);
             }
         });
 
@@ -46,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Create a new intent to open the {@link FootballNewActivity}
-                Intent menuIntent = new Intent(MainActivity.this, FootballNewActivity.class);
+                Intent startItem2 = new Intent(MainActivity.this, FootballNewActivity.class);
 
                 // Start the new activity
-                startActivity(menuIntent);
+                startActivity(startItem2);
             }
         });
 

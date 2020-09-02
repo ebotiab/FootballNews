@@ -155,9 +155,10 @@ public final class QueryUtils {
             // Create a JSONObject from the JSON response string
             JSONObject baseJsonResponse = new JSONObject(footballNewJSON);
 
+            JSONObject responseJson = baseJsonResponse.getJSONObject("response");
             // Extract the JSONArray associated with the key called "results",
             // which represents a list of features (or football news).
-            JSONArray footballNewArray = baseJsonResponse.getJSONArray("results");
+            JSONArray footballNewArray = responseJson.getJSONArray("results");
 
             // For each football new in the footballNewArray, create an {@link FootballNew} object
             for (int i = 0; i < footballNewArray.length(); i++) {
@@ -169,7 +170,7 @@ public final class QueryUtils {
                 String title = currentFootballNew.getString("webTitle");
 
                 // Extract the value for the key called "webPublicationDat"
-                String date = currentFootballNew.getString("webPublicationDat");
+                String date = currentFootballNew.getString("webPublicationDate");
 
                 // Extract the value for the key called "webUrl"
                 String url = currentFootballNew.getString("webUrl");

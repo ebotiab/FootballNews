@@ -3,8 +3,8 @@
 
     <string name="touch">Touch to start</string>
 
-    <!-- Text to display in the list when there are no earthquakes [CHAR LIMIT=NONE] -->
-    <string name="no_footballNews">No earthquakes found.</string>
+    <!-- Text to display in the list when there are no football news [CHAR LIMIT=NONE] -->
+    <string name="no_footballNews">No football news found.</string>
 
     <!-- Error message when there is no internet connectivity [CHAR LIMIT=NONE] -->
     <string name="no_internet_connection">No internet connection.</string>
