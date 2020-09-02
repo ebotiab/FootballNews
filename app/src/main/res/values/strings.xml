@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FootballNews</string>
 
-    <string name="touch">Touch to start</string>
+    <string name="touch">Football News</string>
 
     <!-- Text to display in the list when there are no football news [CHAR LIMIT=NONE] -->
     <string name="no_footballNews">No football news found.</string>

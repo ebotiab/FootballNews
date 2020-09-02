@@ -20,23 +20,25 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/bigshot_one"
+            android:fontFamily="monospace"
             android:textColor="#000000"
+            android:textSize="14sp"
             tools:text="The Fiver | A massive shopping centre called The Square that's actually a pyramid" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="0.3"
             android:orientation="vertical"
-            android:layout_marginStart="20dp">
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="monospace"
                 android:textSize="12sp"
                 tools:text="2020-08-31" />
 
@@ -44,8 +46,8 @@
                 android:id="@+id/time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="sans-serif-black"
+                android:layout_marginTop="3dp"
+                android:fontFamily="monospace"
                 android:textSize="12sp"
                 tools:text="23:01" />
 
