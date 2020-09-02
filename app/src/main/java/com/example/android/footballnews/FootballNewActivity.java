@@ -25,7 +25,7 @@ public class FootballNewActivity extends AppCompatActivity
 
     /** URL for football news data from the The Guardian dataset */
     private static final String GUARDIAN_REQUEST_URL =
-            "https://content.guardianapis.com/football?api-key=test";
+            "https://content.guardianapis.com";
 
     /**
      * Constant value for the football new loader ID. We can choose any integer.
@@ -108,10 +108,11 @@ public class FootballNewActivity extends AppCompatActivity
         // Create a new loader for the given URL
         Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
-
+        uriBuilder.appendPath("football");
         uriBuilder.appendQueryParameter("show-tags", "contributor");
-        String proof = uriBuilder.toString();
-        return new FootballNewLoader(this, proof);
+        uriBuilder.appendQueryParameter("api-key", "test");
+
+        return new FootballNewLoader(this, uriBuilder.toString());
     }
 
     @Override
