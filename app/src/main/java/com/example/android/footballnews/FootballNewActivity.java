@@ -5,7 +5,6 @@ import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -107,7 +106,12 @@ public class FootballNewActivity extends AppCompatActivity
     @Override
     public Loader<List<FootballNew>> onCreateLoader(int i, Bundle bundle) {
         // Create a new loader for the given URL
-        return new FootballNewLoader(this, GUARDIAN_REQUEST_URL);
+        Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
+        Uri.Builder uriBuilder = baseUri.buildUpon();
+
+        uriBuilder.appendQueryParameter("show-tags", "contributor");
+        String proof = uriBuilder.toString();
+        return new FootballNewLoader(this, proof);
     }
 
     @Override

@@ -12,6 +12,12 @@ public class FootballNew {
     /** Date of publication */
     private String mDate;
 
+    /** Author of publication */
+    private String mAuthor;
+
+    /** Section of the new */
+    private String mSection;
+
     /** Website URL of the new */
     private String mUrl;
 
@@ -20,11 +26,15 @@ public class FootballNew {
      *
      * @param Title is the heading of the football new
      * @param Date is the time where the new was published
-     * @param url is the website URL to find the contents of the new
+     * @param author is the person who wrote the new
+     * @param section is the type of the new
+     * @param url is the website URL to find the contents of the new     *
      */
-    public FootballNew(String Title, String Date, String url) {
+    public FootballNew(String Title, String Date, String author, String section, String url) {
         mTitle = Title;
         mDate = Date;
+        mAuthor = author;
+        mSection = section;
         mUrl = url;
     }
 
@@ -40,6 +50,20 @@ public class FootballNew {
      */
     public String getDate() {
         return mDate;
+    }
+
+    /**
+     * Returns the author of the new.
+     */
+    public String getAuthor() {
+        return mAuthor;
+    }
+
+    /**
+     * Returns the section of new.
+     */
+    public String getSection() {
+        return mSection;
     }
 
     /**

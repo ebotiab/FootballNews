@@ -79,6 +79,20 @@ public class FootballNewAdapter extends ArrayAdapter<FootballNew> {
         // Display the time offset of the current football new in that TextView
         timeView.setText(time);
 
+        // Find the TextView with view ID author
+        TextView authorView = listItemView.findViewById(R.id.author);
+        // Get the author of the current football new
+        String currentAuthor = currentFootballNew.getAuthor();
+        // Display the author of the current football new in that TextView
+        authorView.setText(currentAuthor);
+
+        // Find the TextView with view ID title
+        TextView sectionView = listItemView.findViewById(R.id.section);
+        // Get the section of the current new
+        String currentSection = currentFootballNew.getSection();
+        // Display the section of the current new in that TextView
+        sectionView.setText(currentSection);
+
         // Return the list item view that is now showing the appropriate data
         return listItemView;
     }

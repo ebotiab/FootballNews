@@ -169,15 +169,23 @@ public final class QueryUtils {
                 // Extract the value for the key called "webTitle"
                 String title = currentFootballNew.getString("webTitle");
 
-                // Extract the value for the key called "webPublicationDat"
+                // Extract the value for the key called "webPublicationDate"
                 String date = currentFootballNew.getString("webPublicationDate");
+
+                // From the JSONObject called "tags" extract the name of the author
+                JSONArray tagsArray = currentFootballNew.getJSONArray("tags");
+                JSONObject firstTag = tagsArray.getJSONObject(0);
+                String author = firstTag.getString("webTitle");
+
+                // Extract the value for the key called "sectionName"
+                String section = currentFootballNew.getString("sectionName");
 
                 // Extract the value for the key called "webUrl"
                 String url = currentFootballNew.getString("webUrl");
 
                 // Create a new {@link FootballNew} object with the title, date,
                 // and url from the JSON response.
-                FootballNew footballNew = new FootballNew(title, date, url);
+                FootballNew footballNew = new FootballNew(title, date, author, section, url);
 
                 // Add the new {@link FootballNew} to the list of football news.
                 footballNews.add(footballNew);
